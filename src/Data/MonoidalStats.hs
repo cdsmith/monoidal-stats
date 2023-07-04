@@ -1,7 +1,7 @@
 {-# LANGUAGE DefaultSignatures #-}
 {-# LANGUAGE UndecidableInstances #-}
 
-module MonoidalStats where
+module Data.MonoidalStats where
 
 import Data.Foldable (foldl')
 import Linear

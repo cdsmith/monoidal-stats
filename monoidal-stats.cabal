@@ -14,15 +14,15 @@ author:             Chris Smith
 maintainer:         cdsmith@gmail.com
 category:           Math
 build-type:         Simple
-extra-doc-files:    CHANGELOG.md
+extra-doc-files:    CHANGELOG.md, README.md
 
 common warnings
     ghc-options: -Wall
 
 library
     import:           warnings
-    exposed-modules:  MonoidalStats
-    other-modules:    MonoidalStats.Kahan
+    exposed-modules:  Data.MonoidalStats
+    other-modules:    Data.Kahan
     build-depends:    base ^>=4.16.4.0, linear
     hs-source-dirs:   src
     default-language: GHC2021

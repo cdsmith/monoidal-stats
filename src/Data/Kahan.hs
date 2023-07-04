@@ -1,10 +1,10 @@
-module MonoidalStats.Kahan
+module Data.Kahan
   ( KahanSum,
     toKahanSum,
     fromKahanSum,
   )
-
 where
+
 data KahanSum a = KahanSum a a
 
 toKahanSum :: Num a => a -> KahanSum a
