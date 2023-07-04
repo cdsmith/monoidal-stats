@@ -31,8 +31,8 @@ instance (Ord a, Num a) => Num (KahanSum a) where
         | otherwise = (bigY - bigZ) + bigX
       littleZ = err + littleX + littleY
   KahanSum bigX littleX * KahanSum bigY littleY
-    | abs bigX > abs bigY = KahanSum (a + c) (b + d)
-    | otherwise = KahanSum (a + b) (c + d)
+    | abs bigX > abs bigY = KahanSum a c + KahanSum b d
+    | otherwise = KahanSum a b + KahanSum c d
     where
       a = bigX * bigY
       b = littleX * bigY
